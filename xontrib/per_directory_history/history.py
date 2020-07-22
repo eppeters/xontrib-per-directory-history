@@ -8,7 +8,6 @@ from xonsh.ptk2.history import PromptToolkitHistory
 
 from builtins import __xonsh__
 from xonsh.events import events
-from xonsh.platform import ptk_shell_type
 
 logger = logging.getLogger(__name__)
 
@@ -43,14 +42,9 @@ def custom_keybindings(bindings, **kw):
     def do_nothing(func):
         pass
 
-    if ptk_shell_type() == 'prompt_toolkit2':
-        binder = bindings.add
-    else:
-        binder = bindings.registry.add_binding
-
     key = __xonsh__.env.get('PER_DIRECTORY_HISTORY_TOGGLE')
 
-    @binder(key)
+    @bindings.add(key)
     def switch_between_global_and_local_history(_):
         new_hist_type = toggle_per_directory_history()
         print(f'Switching to {new_hist_type} history.', debug=False)
