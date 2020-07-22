@@ -1,22 +1,26 @@
 # xontrib-per-directory-history
 
-## Take back your up arrow!
+_History is written by the victors; history is browsed by directory._
 
-Limits the history available to commands that were executed in the current
+## Take back your up arrow ⮭
+
+This xontrib limits the available history to commands that were executed in the current
 working directory, with the option to switch to the usual global history using
 a keybinding (by default `ctrl+G`).
 
 The functionality this plugin provides is an almost criminally underrated shell
-UI improvement. You will both be surprised by how much faster your history
+UX improvement. You will be _shocked_ by how much faster your history
 scrolling is and how much more relevant the history entries are.  By default,
 the only history entries you can scroll through on the command line (with the
-up/down errors) is the history of commands executed in your current directory.
+up/down errors) are the commands that were executed in the current directory.
 If you can't find what you're looking for in the local history, just hit
 `Ctrl+G` to switch to the global history that you're used to from every other
 shell.
 
+
+
 Hopefully, once you use this for a little bit, you'll be incredibly frustrated
-by the next shell you use that uses global history, and hopefully you'll port
+by the next shell you use that uses global history, and you'll port
 this feature to that shell, too!
 
 ## Status & Limitations
